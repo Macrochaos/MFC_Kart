@@ -185,7 +185,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Biod.h" />
     <ClInclude Include="DlgName.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="Kart.h" />
     <ClInclude Include="KartDlg.h" />
     <ClInclude Include="MFC_test.h" />
@@ -197,7 +199,9 @@
     <ClInclude Include="World.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Biod.cpp" />
     <ClCompile Include="DlgName.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Kart.cpp" />
     <ClCompile Include="KartDlg.cpp" />
     <ClCompile Include="MFC_test.cpp" />
