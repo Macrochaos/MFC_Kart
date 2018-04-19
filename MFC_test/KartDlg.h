@@ -1,5 +1,6 @@
 #pragma once
-
+#include "afxwin.h"
+#include "World.h"
 
 // CKartDlg dialog
 
@@ -12,6 +13,7 @@ class CKartDlg : public CDialog
 	DECLARE_DYNAMIC(CKartDlg)
 
 public:
+	
 	CKartDlg(CWnd* pParent = NULL);   // standard constructor
 	virtual ~CKartDlg();
 
@@ -25,4 +27,10 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 
 	DECLARE_MESSAGE_MAP()
+public:
+	World m_Zawarudo;
+	CStatic m_KartBox;
+	virtual BOOL OnInitDialog();
+	void Update();
+	afx_msg void OnPaint();
 };

@@ -1,5 +1,40 @@
-﻿  MFC_testDlg.cpp
-  KartDlg.cpp
+﻿  Kart.cpp
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(60): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(65): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kart.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kart.cpp(27): warning C4018: '<': signed/unsigned mismatch
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kart.cpp(29): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Generating Code...
-  MFC_test.vcxproj -> C:\Users\Usuario\Documents\Visual Studio 2015\Projects\MFC\MFC_test\Debug\MFC_test.exe
-  MFC_test.vcxproj -> C:\Users\Usuario\Documents\Visual Studio 2015\Projects\MFC\MFC_test\Debug\MFC_test.pdb (Full PDB)
+  Compiling...
+  World.cpp
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(60): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(65): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kart.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\world.cpp(13): warning C4018: '<': signed/unsigned mismatch
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\world.cpp(44): warning C4018: '<': signed/unsigned mismatch
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\world.cpp(45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  WayPoint.cpp
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(60): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(65): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kart.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+  MFC_testDlg.cpp
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(60): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(65): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kart.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+  KartDlg.cpp
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(60): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(65): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kart.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(81): warning C4018: '<': signed/unsigned mismatch
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  GameObject.cpp
+  Biod.cpp
+  MFC_test.vcxproj -> C:\Users\Usuario\Documents\Visual Studio 2015\Projects\Git clones\IA\MFCKart\MFC_test\Debug\MFC_test.exe
+  MFC_test.vcxproj -> C:\Users\Usuario\Documents\Visual Studio 2015\Projects\Git clones\IA\MFCKart\MFC_test\Debug\MFC_test.pdb (Full PDB)

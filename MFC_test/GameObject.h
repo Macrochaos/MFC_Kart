@@ -1,10 +1,10 @@
 #pragma once
-#include "World.h"
+//#include "World.h"
 struct Vec3 {
 	union {
 		struct {
-			float x = 0; 
-			float y = 0; 
+			float x; 
+			float y; 
 		};
 		float v[2];
 	};
@@ -70,19 +70,21 @@ struct Vec3 {
 		return dirdir;
 	}
 	float getDist(Vec3 other) {
-		return (other - *this).Mag;
+		return (other - *this).Mag();
 	}
 };
+
+class World;
 
 class GameObject
 {
 public:
 	World * g_ZA_Waruldo;
-	Vec3 color_RGB;
 	Vec3 Pos;
-	GameObject * m_objective;
+	//GameObject * m_objective;
 
 	virtual void Update() = 0;
+	//void SetColorRGBA(Vec3 color);
 	GameObject();
 	~GameObject();
 };

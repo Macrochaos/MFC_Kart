@@ -54,13 +54,13 @@
     <ClInclude Include="WayPoint.h">
       <Filter>KartClasses\incl</Filter>
     </ClInclude>
-    <ClInclude Include="World.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>KartClasses\incl</Filter>
     </ClInclude>
     <ClInclude Include="Biod.h">
+      <Filter>KartClasses\incl</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
       <Filter>KartClasses\incl</Filter>
     </ClInclude>
   </ItemGroup>
@@ -86,13 +86,13 @@
     <ClCompile Include="WayPoint.cpp">
       <Filter>KartClasses\src</Filter>
     </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>KartClasses\src</Filter>
     </ClCompile>
     <ClCompile Include="Biod.cpp">
+      <Filter>KartClasses\src</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
       <Filter>KartClasses\src</Filter>
     </ClCompile>
   </ItemGroup>
