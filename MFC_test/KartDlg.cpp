@@ -74,10 +74,18 @@ void CKartDlg::OnPaint()
 	CPaintDC dc(this); // device context for painting
 					   // TODO: Add your message handler code here
 					   // Do not call CDialog::OnPaint() for painting messages
-
 	CDC* IMG_DC = m_KartBox.GetDC();
-	for (int i = 0; i < m_Zawarudo.m_vKart.size(); ++i) {
-		IMG_DC->Ellipse(m_Zawarudo.m_vKart[i].Pos.x - 1, m_Zawarudo.m_vKart[i].Pos.y - 1, m_Zawarudo.m_vKart[i].Pos.x + 1, m_Zawarudo.m_vKart[i].Pos.y + 1);
-	}
+	IMG_DC->MoveTo(m_Zawarudo.m_vWP[0].Pos.x, m_Zawarudo.m_vWP[0].Pos.y);
+	
+	for (int i = 0; i < m_Zawarudo.m_vWP.size(); ++i) {
+		IMG_DC->Rectangle(m_Zawarudo.m_vWP[i].Pos.x - 5, m_Zawarudo.m_vWP[i].Pos.y - 5, m_Zawarudo.m_vWP[i].Pos.x + 5, m_Zawarudo.m_vWP[i].Pos.y + 5);
 
+		IMG_DC->LineTo(m_Zawarudo.m_vWP[i].Pos.x, m_Zawarudo.m_vWP[i].Pos.y);
+		
+	}
+	IMG_DC->LineTo(m_Zawarudo.m_vWP[0].Pos.x, m_Zawarudo.m_vWP[0].Pos.y);
+	for (int i = 0; i < m_Zawarudo.m_vKart.size(); ++i) {
+		IMG_DC->Ellipse(m_Zawarudo.m_vKart[i].Pos.x - 2, m_Zawarudo.m_vKart[i].Pos.y - 2, m_Zawarudo.m_vKart[i].Pos.x + 2, m_Zawarudo.m_vKart[i].Pos.y + 2);
+	}
+	
 }
