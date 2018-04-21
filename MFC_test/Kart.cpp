@@ -5,6 +5,7 @@ Kart::Kart(Vec3 Position, float maxSpd, World * p_World) {
 	Pos = Position;
 	maxSpeed = maxSpd;
 	g_ZA_Waruldo = p_World;
+	currWP = nullptr;
 }
 void Kart::Update(){
 	currSpeed = Speed.Mag();

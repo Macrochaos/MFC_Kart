@@ -3,12 +3,13 @@ c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc
 c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(60): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\gameobject.h(65): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kart.h(15): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(81): warning C4018: '<': signed/unsigned mismatch
-c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(87): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(88): warning C4018: '<': signed/unsigned mismatch
-c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(89): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(98): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(100): warning C4018: '<': signed/unsigned mismatch
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(101): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(106): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(107): warning C4018: '<': signed/unsigned mismatch
+c:\users\usuario\documents\visual studio 2015\projects\git clones\ia\mfckart\mfc_test\mfc_test\kartdlg.cpp(108): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
   MFC_test.vcxproj -> C:\Users\Usuario\Documents\Visual Studio 2015\Projects\Git clones\IA\MFCKart\MFC_test\Debug\MFC_test.exe
   MFC_test.vcxproj -> C:\Users\Usuario\Documents\Visual Studio 2015\Projects\Git clones\IA\MFCKart\MFC_test\Debug\MFC_test.pdb (Full PDB)

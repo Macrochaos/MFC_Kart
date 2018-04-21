@@ -49,6 +49,7 @@ void CKartDlg::DoDataExchange(CDataExchange* pDX) {
 
 BEGIN_MESSAGE_MAP(CKartDlg, CDialog)
 	ON_WM_PAINT()
+	ON_WM_TIMER()
 END_MESSAGE_MAP()
 
 
@@ -59,33 +60,53 @@ BOOL CKartDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 	
-
 	// TODO:  Add extra initialization here
+	this->SetTimer(1, 100, NULL);
+
 	//Make timer here
 	//timer calls update
 	return TRUE;  // return TRUE unless you set the focus to a control
 				  // EXCEPTION: OCX Property Pages should return FALSE
 }
 void CKartDlg::Update() {
+
 	m_Zawarudo.Update();
+}
+
+void CKartDlg::OnTimer(UINT_PTR nIDEvent) {
+	// TODO: Add your message handler code here and/or call default
+	if (nIDEvent == 1) 	{
+		Update();
+		UpdatePaintData();
+		m_KartBox.UpdateData(FALSE);
+	}
+	//CTime CurrTime = CTime::GetCurrentTime();
+
+	CDialog::OnTimer(nIDEvent);
 }
 void CKartDlg::OnPaint()
 {
-	CPaintDC dc(this); // device context for painting
+	                   // device context for painting
 					   // TODO: Add your message handler code here
 					   // Do not call CDialog::OnPaint() for painting messages
+	CPaintDC dc(this);
+	CDC* IMG_DC = m_KartBox.GetDC();
+}
+void CKartDlg::UpdatePaintData() {
+	CPaintDC dc(this);
 	CDC* IMG_DC = m_KartBox.GetDC();
 	IMG_DC->MoveTo(m_Zawarudo.m_vWP[0].Pos.x, m_Zawarudo.m_vWP[0].Pos.y);
-	
+
 	for (int i = 0; i < m_Zawarudo.m_vWP.size(); ++i) {
 		IMG_DC->Rectangle(m_Zawarudo.m_vWP[i].Pos.x - 5, m_Zawarudo.m_vWP[i].Pos.y - 5, m_Zawarudo.m_vWP[i].Pos.x + 5, m_Zawarudo.m_vWP[i].Pos.y + 5);
 
 		IMG_DC->LineTo(m_Zawarudo.m_vWP[i].Pos.x, m_Zawarudo.m_vWP[i].Pos.y);
-		
+
 	}
 	IMG_DC->LineTo(m_Zawarudo.m_vWP[0].Pos.x, m_Zawarudo.m_vWP[0].Pos.y);
 	for (int i = 0; i < m_Zawarudo.m_vKart.size(); ++i) {
 		IMG_DC->Ellipse(m_Zawarudo.m_vKart[i].Pos.x - 2, m_Zawarudo.m_vKart[i].Pos.y - 2, m_Zawarudo.m_vKart[i].Pos.x + 2, m_Zawarudo.m_vKart[i].Pos.y + 2);
 	}
-	
 }
+
+

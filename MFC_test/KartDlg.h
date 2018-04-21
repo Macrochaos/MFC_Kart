@@ -6,8 +6,8 @@
 
 
 
-//18 WPs
-//range of detection 1 unit
+
+
 class CKartDlg : public CDialog
 {
 	DECLARE_DYNAMIC(CKartDlg)
@@ -16,7 +16,7 @@ public:
 	
 	CKartDlg(CWnd* pParent = NULL);   // standard constructor
 	virtual ~CKartDlg();
-
+	
 // Dialog Data
 	
 #ifdef AFX_DESIGN_TIME
@@ -32,5 +32,9 @@ public:
 	CStatic m_KartBox;
 	virtual BOOL OnInitDialog();
 	void Update();
+	void UpdatePaintData();
+	//void OnTimer(UINT_PTR nIDEvent);
+
 	afx_msg void OnPaint();
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 };

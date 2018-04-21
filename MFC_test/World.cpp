@@ -44,6 +44,7 @@ World::World(){
 	for (int i = 0; i < m_nKarts; ++i) {
 		Kart K(m_vWP[0].Pos, i+1, this);
 		K.Pos.x += i * 5;
+		K.currWP = &m_vWP[0];
 		m_vKart.push_back(K);
 	}
 	//Kart KKS(m_vWP[0].Pos, 1, this);
