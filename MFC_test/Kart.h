@@ -6,19 +6,20 @@ class WayPoint;
 
 class Kart : public Biod{
 public:
-	
-	Vec3 dir;
-	Vec3 Speed;
-	float m_KartSize = 2;
-	float currSpeed = 0;
+
+	Vec2 KPos;
+	Vec2 Speed;
+	float m_mass;
+	float m_KartSize = 10;
 	float maxSpeed;
-	float FrictionDrag = 0.95;
 	WayPoint * startWP;
 	WayPoint * currWP;
 	//WayPoint * nextWP;
 	void Update();
 	void setNextWP(WayPoint * next);
 	void setStartWP(WayPoint * start);
+	Vec2 KartCollisionAvoidance();
 
-	Kart(Vec3 Position, float maxSpeed, World * p_World);
+	Kart(Vec2 & Position, float maxSpeed, float mass, World * p_World);
+	Kart(const Kart & otherK);
 };

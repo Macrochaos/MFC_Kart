@@ -6,6 +6,6 @@ GameObject::GameObject(){
 GameObject::~GameObject(){
 
 }
-//void GameObject::SetColorRGBA(Vec3 color) {
+//void GameObject::SetColorRGBA(Vec2 color) {
 //	color_RGB = color;
 //}
