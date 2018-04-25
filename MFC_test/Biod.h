@@ -1,14 +1,16 @@
 #pragma once
 #include "GameObject.h"
+
 class Biod : public GameObject {
 public:
 
-	// convert to vec3 from void
-	void Seek(Vec3 target, Vec3 spd_out ,float scaling);
-	void Flee(Vec3 target, Vec3 spd_out, float scaling);
-	void Arrive(Vec3 target, Vec3 spd_out, float scaling);
-	void Wander(Vec3 target, Vec3 spd_out, float scaling);
-	void Follow_Path(Vec3 target, Vec3 spd_out, float scaling);
+	// convert to Vec2 from void
+	const float FRAMESCALING = 0.016;
+	Vec2 Seek(Vec2 & target, float scaling);
+	Vec2 Flee(Vec2 & target,  float scaling);
+	Vec2 Arrive(Vec2 & target,  float scaling);
+	Vec2 Wander(Vec2 & target, float scaling);
+	Vec2 Follow_Path(Vec2 & target, float scaling);
 
 	virtual void Update() = 0;
 	Biod();

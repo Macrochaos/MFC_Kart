@@ -6,23 +6,23 @@ Biod::Biod() {
 Biod::~Biod() {
 
 }
-// convert to vec3 from void
+// convert to Vec2 from void
 
-void Biod::Seek(Vec3 target, Vec3 spd_out, float scaling) {
-	Vec3 Dir = (target - Pos);
-	Dir.Normalize();
-	spd_out += (Dir*scaling);
-	Pos += spd_out;
+Vec2 Biod::Seek(Vec2 & target, float scaling) {
+	Vec2 Dir = (target - Pos);
+	//Dir *= (scaling * FRAMESCALING);
+	Dir *= scaling;
+	return Dir;
 }
-void Biod::Flee(Vec3 target, Vec3 spd_out, float scaling) {
-
+Vec2 Biod::Flee(Vec2 & target, float scaling) {
+	return Vec2();
 }
-void Biod::Arrive(Vec3 target, Vec3 spd_out, float scaling) {
-
+Vec2 Biod::Arrive(Vec2 & target, float scaling) {
+	return Vec2();
 }
-void Biod::Wander(Vec3 target, Vec3 spd_out, float scaling) {
-
+Vec2 Biod::Wander(Vec2 & target, float scaling) {
+	return Vec2();
 }
-void Biod::Follow_Path(Vec3 target, Vec3 spd_out, float scaling) {
-
+Vec2 Biod::Follow_Path(Vec2 & target, float scaling) {
+	return Vec2();
 }

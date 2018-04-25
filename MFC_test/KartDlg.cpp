@@ -20,15 +20,15 @@ IMPLEMENT_DYNAMIC(CKartDlg, CDialog)
 //	}
 //	return false;
 //}
-//Vec3 vecMidPoint(Vec3 &head, Vec3 &tail) {
+//Vec2 vecMidPoint(Vec2 &head, Vec2 &tail) {
 //	return (head - tail) * 0.5;
 //}
-//Vec3 Normalized(Vec3 &vec) {
+//Vec2 Normalized(Vec2 &vec) {
 //	return vec *(1 / vec.Mag());
 //}
-//float Dot(Vec3 & vecA, Vec3 & vecB) {
-//	Vec3 vecN_A = Normalized(vecA);
-//	Vec3 vecN_B = Normalized(vecB);
+//float Dot(Vec2 & vecA, Vec2 & vecB) {
+//	Vec2 vecN_A = Normalized(vecA);
+//	Vec2 vecN_B = Normalized(vecB);
 //	return(vecN_A.x*vecN_B.x + vecN_A.y*vecN_B.y + vecN_A.z*vecN_B.z);
 //}
 */
@@ -61,7 +61,7 @@ BOOL CKartDlg::OnInitDialog()
 	CDialog::OnInitDialog();
 	
 	// TODO:  Add extra initialization here
-	this->SetTimer(1, 100, NULL);
+	this->SetTimer(1, 5, NULL);
 
 	//Make timer here
 	//timer calls update
@@ -69,7 +69,6 @@ BOOL CKartDlg::OnInitDialog()
 				  // EXCEPTION: OCX Property Pages should return FALSE
 }
 void CKartDlg::Update() {
-
 	m_Zawarudo.Update();
 }
 
@@ -93,19 +92,22 @@ void CKartDlg::OnPaint()
 	CDC* IMG_DC = m_KartBox.GetDC();
 }
 void CKartDlg::UpdatePaintData() {
+	RECT ClientRect;
+	m_KartBox.GetClientRect(&ClientRect);
 	CPaintDC dc(this);
 	CDC* IMG_DC = m_KartBox.GetDC();
-	IMG_DC->MoveTo(m_Zawarudo.m_vWP[0].Pos.x, m_Zawarudo.m_vWP[0].Pos.y);
+	IMG_DC->Rectangle(&ClientRect);
+	//IMG_DC->Rectangle(&ClientRect);
+	//IMG_DC->
+	IMG_DC->MoveTo(m_Zawarudo.m_vWP[0]->Pos.x, m_Zawarudo.m_vWP[0]->Pos.y);
 
 	for (int i = 0; i < m_Zawarudo.m_vWP.size(); ++i) {
-		IMG_DC->Rectangle(m_Zawarudo.m_vWP[i].Pos.x - 5, m_Zawarudo.m_vWP[i].Pos.y - 5, m_Zawarudo.m_vWP[i].Pos.x + 5, m_Zawarudo.m_vWP[i].Pos.y + 5);
-
-		IMG_DC->LineTo(m_Zawarudo.m_vWP[i].Pos.x, m_Zawarudo.m_vWP[i].Pos.y);
-
+		IMG_DC->Rectangle(m_Zawarudo.m_vWP[i]->Pos.x - 7, m_Zawarudo.m_vWP[i]->Pos.y - 7, m_Zawarudo.m_vWP[i]->Pos.x + 7, m_Zawarudo.m_vWP[i]->Pos.y + 7);
+		IMG_DC->LineTo(m_Zawarudo.m_vWP[i]->Pos.x, m_Zawarudo.m_vWP[i]->Pos.y);
 	}
-	IMG_DC->LineTo(m_Zawarudo.m_vWP[0].Pos.x, m_Zawarudo.m_vWP[0].Pos.y);
+	IMG_DC->LineTo(m_Zawarudo.m_vWP[0]->Pos.x, m_Zawarudo.m_vWP[0]->Pos.y);
 	for (int i = 0; i < m_Zawarudo.m_vKart.size(); ++i) {
-		IMG_DC->Ellipse(m_Zawarudo.m_vKart[i].Pos.x - 2, m_Zawarudo.m_vKart[i].Pos.y - 2, m_Zawarudo.m_vKart[i].Pos.x + 2, m_Zawarudo.m_vKart[i].Pos.y + 2);
+		IMG_DC->Ellipse(m_Zawarudo.m_vKart[i]->Pos.x - 5, m_Zawarudo.m_vKart[i]->Pos.y - 5, m_Zawarudo.m_vKart[i]->Pos.x + 5, m_Zawarudo.m_vKart[i]->Pos.y + 5);
 	}
 }
 

@@ -6,22 +6,21 @@ class WayPoint : public GameObject {
 public:
 	WayPoint();
 	~WayPoint();
-	WayPoint(Vec3 Poss, bool is_StartLine, Vec3 m_assistDir);
-	WayPoint(Vec3 Poss, WayPoint * nextWP, bool is_StartLine, Vec3 m_assistDir);
+	WayPoint(Vec2 & Poss, bool is_StartLine, Vec2 & m_assistDir);
+	WayPoint(Vec2 & Poss, WayPoint * nextWP, bool is_StartLine, Vec2 & m_assistDir);
 
-	//World * g_ZA_Waruldo;
-	bool m_is_StartLine;
 	void Update();
 
 	void SetNext_WayPoint(WayPoint * nextWP);
-	void SetPos(Vec3 position);
+	void SetPos(Vec2 & position);
+	void SetPos(const int xx, const int yy);
 	void SetWorld(World * ZA_Waruldo);
 
+	float m_pathSize;
+	bool m_is_StartLine;
 	WayPoint * m_nextWP;
-	//WayPoint * m_prevWP;
-	Vec3 nextWPDirNorm;
-	Vec3 m_assistDir;
+	Vec2 nextWPDirNorm;
+	Vec2 m_assistDir;
 	
-
 };
 
