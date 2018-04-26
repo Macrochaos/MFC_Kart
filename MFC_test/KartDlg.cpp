@@ -61,7 +61,7 @@ BOOL CKartDlg::OnInitDialog()
 	CDialog::OnInitDialog();
 	
 	// TODO:  Add extra initialization here
-	this->SetTimer(1, 5, NULL);
+	this->SetTimer(1, 16, NULL);
 
 	//Make timer here
 	//timer calls update
@@ -92,22 +92,41 @@ void CKartDlg::OnPaint()
 	CDC* IMG_DC = m_KartBox.GetDC();
 }
 void CKartDlg::UpdatePaintData() {
+
 	RECT ClientRect;
 	m_KartBox.GetClientRect(&ClientRect);
+
 	CPaintDC dc(this);
 	CDC* IMG_DC = m_KartBox.GetDC();
 	IMG_DC->Rectangle(&ClientRect);
-	//IMG_DC->Rectangle(&ClientRect);
-	//IMG_DC->
-	IMG_DC->MoveTo(m_Zawarudo.m_vWP[0]->Pos.x, m_Zawarudo.m_vWP[0]->Pos.y);
 
-	for (int i = 0; i < m_Zawarudo.m_vWP.size(); ++i) {
-		IMG_DC->Rectangle(m_Zawarudo.m_vWP[i]->Pos.x - 7, m_Zawarudo.m_vWP[i]->Pos.y - 7, m_Zawarudo.m_vWP[i]->Pos.x + 7, m_Zawarudo.m_vWP[i]->Pos.y + 7);
-		IMG_DC->LineTo(m_Zawarudo.m_vWP[i]->Pos.x, m_Zawarudo.m_vWP[i]->Pos.y);
+	IMG_DC->MoveTo(m_Zawarudo.m_vWP[0]->Pos.x, m_Zawarudo.m_vWP[0]->Pos.y); // Moves to position of first Waypoint
+	HGDIOBJ pAnteriorBrush;
+	for (auto& wp : m_Zawarudo.m_vWP) { // Paints waypoints and the lines that connect them 
+		CBrush br(static_cast<COLORREF>(wp->m_WPcolor));
+		pAnteriorBrush = IMG_DC->SelectObject(br);
+
+		IMG_DC->Rectangle(wp->Pos.x + wp->m_pathSize, wp->Pos.y + wp->m_pathSize, 
+			wp->Pos.x - wp->m_pathSize, wp->Pos.y - wp->m_pathSize);
+		IMG_DC->LineTo(wp->Pos.x, wp->Pos.y);
+
+		IMG_DC->SelectObject(pAnteriorBrush);
 	}
-	IMG_DC->LineTo(m_Zawarudo.m_vWP[0]->Pos.x, m_Zawarudo.m_vWP[0]->Pos.y);
-	for (int i = 0; i < m_Zawarudo.m_vKart.size(); ++i) {
-		IMG_DC->Ellipse(m_Zawarudo.m_vKart[i]->Pos.x - 5, m_Zawarudo.m_vKart[i]->Pos.y - 5, m_Zawarudo.m_vKart[i]->Pos.x + 5, m_Zawarudo.m_vKart[i]->Pos.y + 5);
+	IMG_DC->LineTo(m_Zawarudo.m_vWP[0]->Pos.x, m_Zawarudo.m_vWP[0]->Pos.y); // Paints last line to first Waypoint
+	
+	
+	for (auto& kart : m_Zawarudo.m_vKart) { // Paints the karts
+		CBrush br(static_cast<COLORREF>(kart->m_color));
+		pAnteriorBrush = IMG_DC->SelectObject(br);
+		
+		IMG_DC->Ellipse(kart->Pos.x + kart->m_KartSize, kart->Pos.y + kart->m_KartSize,
+			kart->Pos.x - kart->m_KartSize, kart->Pos.y - kart->m_KartSize);
+		
+		IMG_DC->MoveTo(kart->Pos.x, kart->Pos.y);
+		IMG_DC->LineTo(kart->Pos.x + (kart->m_steering.x * kart->m_maxm_Speed  * 5),
+					   kart->Pos.y + (kart->m_steering.y * kart->m_maxm_Speed) * 5);
+
+		IMG_DC->SelectObject(pAnteriorBrush);
 	}
 }
 

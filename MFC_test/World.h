@@ -11,9 +11,10 @@ public:
 	vector<WayPoint*> m_vWP;
 	vector<Kart*> m_vKart;
 
-	
-	unsigned int m_nWayPoints = 15;
-	unsigned int m_nKarts = 20;
+	unsigned int m_nLaps;
+	unsigned int m_nWayPoints;
+	unsigned int m_nKarts;
+	bool m_bRacing;
 	void Update();
 	World();
 	~World();

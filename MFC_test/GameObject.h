@@ -1,5 +1,4 @@
 #pragma once
-//#include "World.h"
 struct Vec2 {
 	union {
 		struct {
@@ -58,21 +57,16 @@ struct Vec2 {
 		mag = sqrt(mag);
 		x /= mag; y /= mag;
 	}
-	Vec2 getNormalized(const Vec2 & vect) {
+	Vec2 getNormalized() {
 		float mag = 0;
-		Vec2 res = vect;
+		Vec2 res;
 		mag = res.x * res.x + res.y * res.y;
 		mag = sqrt(mag);
-		res.x *= mag; res.y *= mag;
+		res *= mag;
 		return res;
 	}
 	float Mag() {
 		return sqrt((x * x) + (y * y));
-	}
-	Vec2 getDir() {
-		Vec2 dirdir = *this;
-		getNormalized(dirdir);
-		return dirdir;
 	}
 	float getDist(Vec2 & other) {
 		Vec2 res;
@@ -87,10 +81,7 @@ class GameObject
 public:
 	World * g_ZA_Waruldo;
 	Vec2 Pos;
-	//GameObject * m_objective;
-
 	virtual void Update() = 0;
-	//void SetColorRGBA(Vec2 color);
 	GameObject();
 	~GameObject();
 };

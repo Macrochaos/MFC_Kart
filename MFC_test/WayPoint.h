@@ -17,6 +17,7 @@ public:
 	void SetWorld(World * ZA_Waruldo);
 
 	float m_pathSize;
+	unsigned long m_WPcolor;
 	bool m_is_StartLine;
 	WayPoint * m_nextWP;
 	Vec2 nextWPDirNorm;

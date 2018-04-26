@@ -6,11 +6,9 @@ Biod::Biod() {
 Biod::~Biod() {
 
 }
-// convert to Vec2 from void
 
 Vec2 Biod::Seek(Vec2 & target, float scaling) {
 	Vec2 Dir = (target - Pos);
-	//Dir *= (scaling * FRAMESCALING);
 	Dir *= scaling;
 	return Dir;
 }
